@@ -16,21 +16,75 @@
   
   <div><b>Authors:</b> Xinlei Ren, Xiguang Zheng, Lianwu Chen, Chenglin Xu, Chen Zhang, Liang Guo, Bing Yu
   </div>
-  
+  <div><b>Affiliation:</b> Kuai Shou Technology Co. Beijing, China
+  </div>
+
   <hr style="height:1px;border:none;border-top:1px solid #555555; width:130%">
   <h2>Part1: real recordings with reference</h2>
-  
+
   <table border="1">
-  <tr>
-    <td>100</td>
-    <td>200</td>
-    <td>300</td>
-  </tr>
-  <tr>
-    <td>400</td>
-    <td>500</td>
-    <td>600</td>
-  </tr>
+    <tr>
+      <td>  </td>
+      <td>sample1</td>
+      <td>sample2</td>
+      <td>sample3</td>
+      <td>sample4</td>
+      <td>sample5</td>
+    </tr>
+    <tr>
+      <td>reference</td>
+      <td><audio controls=""><source src="./reference/m1_reference_e.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f2_reference_e.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f3_reference_e.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f1_reference_c.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/m2_reference_c.wav"></audio></td>
+    </tr>
+    <tr>
+      <td>degraded</td>
+      <td><audio controls=""><source src="./reference/m1_degradation_e.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f2_degradation_e.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f3_degradation_e.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f1_degradation_c.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/m2_degradation_c.wav"></audio></td>
+    </tr>
+    <tr>
+      <td>our approach restored</td>
+      <td><audio controls=""><source src="./reference/m1_restoration_e.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f2_restoration_e.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f3_restoration_e.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f1_restoration_c.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/m2_restoration_c.wav"></audio></td>
+    </tr>
+  </table>
+
+  <hr style="height:1px;border:none;border-top:1px solid #555555; width:130%">
+  <h2>Part2: real recordings without reference</h2>
+
+  <table border="1">
+    <tr>
+      <td>  </td>
+      <td>sample1</td>
+      <td>sample2</td>
+      <td>sample3</td>
+      <td>sample4</td>
+      <td>sample5</td>
+    </tr>
+    <tr>
+      <td>degraded</td>
+      <td><audio controls=""><source src="./without_reference/f1_degradation_c.wav"></audio></td>
+      <td><audio controls=""><source src="./without_reference/m1_degradation_c.wav"></audio></td>
+      <td><audio controls=""><source src="./without_reference/m3_degradation_c.wav"></audio></td>
+      <td><audio controls=""><source src="./without_reference/f2_degradation_c.wav"></audio></td>
+      <td><audio controls=""><source src="./without_reference/m2_degradation_c.wav"></audio></td>
+    </tr>
+    <tr>
+      <td>our approach restored</td>
+      <td><audio controls=""><source src="./without_reference/f1_restoration_c.wav"></audio></td>
+      <td><audio controls=""><source src="./without_reference/m1_restoration_c.wav"></audio></td>
+      <td><audio controls=""><source src="./without_reference/m3_restoration_c.wav"></audio></td>
+      <td><audio controls=""><source src="./without_reference/f2_restoration_c.wav"></audio></td>
+      <td><audio controls=""><source src="./without_reference/m2_restoration_c.wav"></audio></td>
+    </tr>
   </table>
   
 </body>
