@@ -2,126 +2,161 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
   <title>HIGH QUALITY SPEECH RESTORATION FROM DEVICE COLORATED AND REVERBERATED SPEECH</title>
-  <link rel="stylesheet" type="text/css" href="./stylesheets/github-light.css">
+  <style>
+    .abstract{
+      max-width:1000px;
+      margin:0 auto;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="abstract">
   <article>
     <header>
-      <h1>Samples from "HIGH QUALITY SPEECH RESTORATION FROM DEVICE COLORATED AND REVERBERATED SPEECH"</h1>
+      <h1>HIGH QUALITY SPEECH RESTORATION FROM DEVICE COLORATED AND REVERBERATED SPEECH</h1>
     </header>
   </article>
   
-  <div><b>Authors:</b> Xinlei Ren, Xiguang Zheng, Lianwu Chen, Chenglin Xu, Chen Zhang, Liang Guo, Bing Yu
-  </div>
-  <div><b>Affiliation:</b> Kuaishou Technology, Beijing, China
-  </div>
+  <div><b>Authors:</b> Xinlei Ren, Xiguang Zheng, Lianwu Chen, Chenglin Xu, Chen Zhang, Liang Guo, Bing Yu</div>
+  <div><b>Affiliation:</b> Kuaishou Technology, Beijing, China</div>
+  <hr style="height:1px;border:none;border-top:1px solid #555555; width:100%">
 
-  <hr style="height:1px;border:none;border-top:1px solid #555555; width:130%">
-  <h2>Part1: real recordings with reference</h2>
+  <h2>Abstract</h2>
+  Device coloration and room reverberation are two main factors that degrade the speech quality of user generated contents. 
+  Although the conventional speech enhancement can remove the distortions introduced by noise and late reverberation signals, 
+  the device coloration and early reverberation distortion is still untouched and the quality of enhanced speech is much lower 
+  than that of high-quality speech. In this paper, a neural network based device decoloration and dereverberation system is 
+  proposed for high-quality speech restoration. The results show that the proposed method achieves significantly improvements 
+  on various objective metrics and subjective MOS score. The robustness of proposed system could also be demonstrated on real 
+  recordings with unseen devices.
+  <hr style="height:1px;border:none;border-top:1px solid #555555; width:100%">
 
+  <h2>System Architecture</h2>
+  <img src="./system/system_rxl.jpg" width="1000"/>
+  <hr style="height:1px;border:none;border-top:1px solid #555555; width:100%">
+
+  <h2>Demo</h2>
+  <h3>Part1: real recordings with reference</h3>
   <table border="1">
     <tr>
       <td>  </td>
-      <th>sample1</th>
-      <th>sample2</th>
-      <th>sample3</th>
-      <th>sample4</th>
-      <th>sample5</th>
+      <th>reference</th>
+      <th>degraded</th>
+      <th>our approach restored</th>
     </tr>
-
     <tr>
-      <td rowspan="2">reference</td>
-      <td><img src="./reference/m1_reference_e.png" width="320" height="250"/></td>
-      <td><img src="./reference/f2_reference_e.png" width="320" height="250"/></td>
-      <td><img src="./reference/f3_reference_e.png" width="320" height="250"/></td>
-      <td><img src="./reference/f1_reference_c.png" width="320" height="250"/></td>
-      <td><img src="./reference/m2_reference_c.png" width="320" height="250"/></td>
+      <td rowspan="2">sample1</td>
+      <td><img src="./reference/m1_reference_e.png" width="305" height="250"/></td>
+      <td><img src="./reference/m1_degradation_e.png" width="305" height="250"/></td>
+      <td><img src="./reference/m1_restoration_e.png" width="305" height="250"/></td>
     </tr>
     <tr>
       <td><audio controls=""><source src="./reference/m1_reference_e.wav"></audio></td>
-      <td><audio controls=""><source src="./reference/f2_reference_e.wav"></audio></td>
-      <td><audio controls=""><source src="./reference/f3_reference_e.wav"></audio></td>
-      <td><audio controls=""><source src="./reference/f1_reference_c.wav"></audio></td>
-      <td><audio controls=""><source src="./reference/m2_reference_c.wav"></audio></td>
-    </tr>
-    <tr>
-      <td rowspan="2">degraded</td>
-      <td><img src="./reference/m1_degradation_e.png" width="320" height="250"/></td>
-      <td><img src="./reference/f2_degradation_e.png" width="320" height="250"/></td>
-      <td><img src="./reference/f3_degradation_e.png" width="320" height="250"/></td>
-      <td><img src="./reference/f1_degradation_c.png" width="320" height="250"/></td>
-      <td><img src="./reference/m2_degradation_c.png" width="320" height="250"/></td>
-    </tr>
-    <tr>
       <td><audio controls=""><source src="./reference/m1_degradation_e.wav"></audio></td>
-      <td><audio controls=""><source src="./reference/f2_degradation_e.wav"></audio></td>
-      <td><audio controls=""><source src="./reference/f3_degradation_e.wav"></audio></td>
-      <td><audio controls=""><source src="./reference/f1_degradation_c.wav"></audio></td>
-      <td><audio controls=""><source src="./reference/m2_degradation_c.wav"></audio></td>
-    </tr>
-    <tr>
-      <td rowspan="2">our approach restored</td>
-      <td><img src="./reference/m1_restoration_e.png" width="320" height="250"/></td>
-      <td><img src="./reference/f2_restoration_e.png" width="320" height="250"/></td>
-      <td><img src="./reference/f3_restoration_e.png" width="320" height="250"/></td>
-      <td><img src="./reference/f1_restoration_c.png" width="320" height="250"/></td>
-      <td><img src="./reference/m2_restoration_c.png" width="320" height="250"/></td>
-    </tr>
-    <tr>
       <td><audio controls=""><source src="./reference/m1_restoration_e.wav"></audio></td>
+    </tr>
+    <tr>
+      <td rowspan="2">sample2</td>
+      <td><img src="./reference/f2_reference_e.png" width="305" height="250"/></td>
+      <td><img src="./reference/f2_degradation_e.png" width="305" height="250"/></td>
+      <td><img src="./reference/f2_restoration_e.png" width="305" height="250"/></td>
+    </tr>
+    <tr>
+      <td><audio controls=""><source src="./reference/f2_reference_e.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f2_degradation_e.wav"></audio></td>
       <td><audio controls=""><source src="./reference/f2_restoration_e.wav"></audio></td>
+    </tr>
+    <tr>
+      <td rowspan="2">sample3</td>
+      <td><img src="./reference/f3_reference_e.png" width="305" height="250"/></td>
+      <td><img src="./reference/f3_degradation_e.png" width="305" height="250"/></td>
+      <td><img src="./reference/f3_restoration_e.png" width="305" height="250"/></td>
+    </tr>
+    <tr>
+      <td><audio controls=""><source src="./reference/f3_reference_e.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f3_degradation_e.wav"></audio></td>
       <td><audio controls=""><source src="./reference/f3_restoration_e.wav"></audio></td>
+    </tr>
+    <tr>
+      <td rowspan="2">sample4</td>
+      <td><img src="./reference/f1_reference_c.png" width="305" height="250"/></td>
+      <td><img src="./reference/f1_degradation_c.png" width="305" height="250"/></td>
+      <td><img src="./reference/f1_restoration_c.png" width="305" height="250"/></td>
+    </tr>
+    <tr>
+      <td><audio controls=""><source src="./reference/f1_reference_c.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/f1_degradation_c.wav"></audio></td>
       <td><audio controls=""><source src="./reference/f1_restoration_c.wav"></audio></td>
+    </tr>
+    <tr>
+      <td rowspan="2">sample5</td>
+      <td><img src="./reference/m2_reference_c.png" width="305" height="250"/></td>
+      <td><img src="./reference/m2_degradation_c.png" width="305" height="250"/></td>
+      <td><img src="./reference/m2_restoration_c.png" width="305" height="250"/></td>
+    </tr>
+    <tr>
+      <td><audio controls=""><source src="./reference/m2_reference_c.wav"></audio></td>
+      <td><audio controls=""><source src="./reference/m2_degradation_c.wav"></audio></td>
       <td><audio controls=""><source src="./reference/m2_restoration_c.wav"></audio></td>
     </tr>
   </table>
 
-  <hr style="height:1px;border:none;border-top:1px solid #555555; width:130%">
-  <h2>Part2: real recordings without reference</h2>
-
+  <h3>Part2: real recordings without reference</h2>
   <table border="1">
     <tr>
       <td>  </td>
-      <th>sample1</th>
-      <th>sample2</th>
-      <th>sample3</th>
-      <th>sample4</th>
-      <th>sample5</th>
+      <th>degraded</th>
+      <th>our approach restored</th>
     </tr>
     <tr>
-      <td rowspan="2">degraded</td>
-      <td><img src="./without_reference/f1_degradation_c.png" width="320" height="250"></td>
-      <td><img src="./without_reference/m1_degradation_c.png" width="320" height="250"></td>
-      <td><img src="./without_reference/m3_degradation_c.png" width="320" height="250"></td>
-      <td><img src="./without_reference/f2_degradation_c.png" width="320" height="250"></td>
-      <td><img src="./without_reference/m2_degradation_c.png" width="320" height="250"></td>
+      <td rowspan="2">sample1</td>
+      <td><img src="./without_reference/f1_degradation_c.png" width="460" height="360"/></td>
+      <td><img src="./without_reference/f1_restoration_c.png" width="460" height="360"/></td>
     </tr>
     <tr>
       <td><audio controls=""><source src="./without_reference/f1_degradation_c.wav"></audio></td>
-      <td><audio controls=""><source src="./without_reference/m1_degradation_c.wav"></audio></td>
-      <td><audio controls=""><source src="./without_reference/m3_degradation_c.wav"></audio></td>
-      <td><audio controls=""><source src="./without_reference/f2_degradation_c.wav"></audio></td>
-      <td><audio controls=""><source src="./without_reference/m2_degradation_c.wav"></audio></td>
-    </tr>
-    <tr>
-      <td rowspan="2">our approach restored</td>
-      <td><img src="./without_reference/f1_restoration_c.png" width="320" height="250"></audio></td>
-      <td><img src="./without_reference/m1_restoration_c.png" width="320" height="250"></audio></td>
-      <td><img src="./without_reference/m3_restoration_c.png" width="320" height="250"></audio></td>
-      <td><img src="./without_reference/f2_restoration_c.png" width="320" height="250"></audio></td>
-      <td><img src="./without_reference/m2_restoration_c.png" width="320" height="250"></audio></td>
-    </tr>
-    <tr>
       <td><audio controls=""><source src="./without_reference/f1_restoration_c.wav"></audio></td>
+    </tr>
+    <tr>
+      <td rowspan="2">sample2</td>
+      <td><img src="./without_reference/m1_degradation_c.png" width="460" height="360"/></td>
+      <td><img src="./without_reference/m1_restoration_c.png" width="460" height="360"/></td>
+    </tr>
+    <tr>
+      <td><audio controls=""><source src="./without_reference/m1_degradation_c.wav"></audio></td>
       <td><audio controls=""><source src="./without_reference/m1_restoration_c.wav"></audio></td>
+    </tr>
+    <tr>
+      <td rowspan="2">sample3</td>
+      <td><img src="./without_reference/m3_degradation_c.png" width="460" height="360"/></td>
+      <td><img src="./without_reference/m3_restoration_c.png" width="460" height="360"/></td>
+    </tr>
+    <tr>
+      <td><audio controls=""><source src="./without_reference/m3_degradation_c.wav"></audio></td>
       <td><audio controls=""><source src="./without_reference/m3_restoration_c.wav"></audio></td>
+    </tr>
+    <tr>
+      <td rowspan="2">sample4</td>
+      <td><img src="./without_reference/f2_degradation_c.png" width="460" height="360"/></td>
+      <td><img src="./without_reference/f2_restoration_c.png" width="460" height="360"/></td>
+    </tr>
+    <tr>
+      <td><audio controls=""><source src="./without_reference/f2_degradation_c.wav"></audio></td>
       <td><audio controls=""><source src="./without_reference/f2_restoration_c.wav"></audio></td>
+    </tr>
+    <tr>
+      <td rowspan="2">sample5</td>
+      <td><img src="./without_reference/m2_degradation_c.png" width="460" height="360"/></td>
+      <td><img src="./without_reference/m2_restoration_c.png" width="460" height="360"/></td>
+    </tr>
+    <tr>
+      <td><audio controls=""><source src="./without_reference/m2_degradation_c.wav"></audio></td>
       <td><audio controls=""><source src="./without_reference/m2_restoration_c.wav"></audio></td>
     </tr>
   </table>
+  </div>
 
 </body>
 </html>
